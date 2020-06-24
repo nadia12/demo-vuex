@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Todos from "../views/Todos.vue";
+import TodoList from "../views/TodoList.vue";
 
 Vue.use(VueRouter);
 
@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: "/todos",
-    name: "Todos",
-    component: Todos
+    name: "TodoList",
+    component: TodoList
   }
 ];
 

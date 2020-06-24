@@ -8,7 +8,7 @@
       <b-card-text>
         {{ todo.title }}
         <div>
-          <button class="btn btn-sm btn-info">Update</button>
+          <button class="btn btn-sm btn-info" @click="deleteTodo(todo.id)">Delete</button>
         </div>
       </b-card-text>
     </b-card>
@@ -17,7 +17,12 @@
 
 <script>
 export default {
-  props: ["todo"]
+  props: ["todo"],
+  methods: {
+    deleteTodo(id){
+      this.$store.dispatch('deleteTodoDiStore', { id })
+    }
+  }
 };
 </script>
 
